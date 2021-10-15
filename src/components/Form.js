@@ -1,17 +1,22 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom'
 
 
 const Form = (props) => {
     const {
         submit,
         values,
-        change
-
+        change,
+        disabled,
+        errors
       } = props
+
+      const history = useHistory()
 
     const onSubmit = evt => {
         evt.preventDefault()
         submit()
+        history.push("/post")
       }
     
     const onChange = evt => {
@@ -23,7 +28,7 @@ const Form = (props) => {
     return (
         <div>
             
-            <form onSubmit={props.submit} id='pizza-form'>
+            <form  id='pizza-form' onSubmit={onSubmit}>
             <div className='name-input'>
                     <label>
                         <h2>Put your name</h2>
@@ -37,8 +42,9 @@ const Form = (props) => {
                     </label>
                 </div>
                 <h2>Build Your Own Pizza</h2>
-             <p>
-                <label> Choice Of Size
+             <>
+                 <div className="size-dropdown">
+                <label > Choice Of Size
                 <select
                     onChange={onChange}
                     value={values.size}
@@ -46,30 +52,31 @@ const Form = (props) => {
                 >
                     <option value=''>- Select -</option>
                     <option value='small'>Small</option>
-                    <option value='medium'>Madium</option>
-                    <option value='lange'>Large</option>
+                    <option value='medium'>Medium</option>
+                    <option value='large'>Large</option>
                 
                 </select>
                 </label>
-             </p>
-                <h2>Choice of Souse</h2> 
+                </div>
+             </>
+                <h2>Choice of Sauce</h2> 
                  <label> Original Red 
                 <input 
                     type="radio"
-                    name="souce"
-                    value="souce1"
+                    name="sauce"
+                    value="sauce1"
                     onChange={onChange}
-                    checked={values.souce === 'souse1'}
+                    checked={values.sauce === 'sauce1'}
                 />
                 </label>
 
                 <label> BBQ
                 <input
                     type="radio"
-                    name="souce"
-                    value="souce2"
+                    name="sauce"
+                    value="sauce2"
                     onChange={onChange}
-                    checked={values.souce === 'souce2'}
+                    checked={values.sauce === 'sauce2'}
                 />   
                 </label>
            <div className="toppings">
@@ -141,7 +148,7 @@ const Form = (props) => {
                     </label>
             </p>
             </div>
-            <div className='spacial'>
+            <div className='special-text'>
                     <label>
                         <h2>Special Instructions:</h2>
                         <input
@@ -153,9 +160,13 @@ const Form = (props) => {
                         />
                     </label>
 
+            <div className='errors'>
+                <div>{errors.customerName}</div>
+                <div>{errors.pizzaSize}</div>
+            </div>
 
                 </div>
-                <button id='order-button' >Submit</button>
+                <button id='order-button' disabled={disabled} >Submit</button>
             </form>
         </div>
    )
