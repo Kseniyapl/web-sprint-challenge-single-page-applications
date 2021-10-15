@@ -13,6 +13,7 @@ const Form = (props) => {
         evt.preventDefault()
         submit()
       }
+    
     const onChange = evt => {
     
     const { name, value, checked, type } = evt.target;
@@ -21,6 +22,7 @@ const Form = (props) => {
       }
     return (
         <div>
+            
             <form onSubmit={props.submit} id='pizza-form'>
             <div className='name-input'>
                     <label>
@@ -150,7 +152,10 @@ const Form = (props) => {
                             type='text'
                         />
                     </label>
+
+
                 </div>
+                <button id='order-button' >Submit</button>
             </form>
         </div>
    )

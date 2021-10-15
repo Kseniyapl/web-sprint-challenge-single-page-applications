@@ -81,9 +81,9 @@ useEffect(() => {
         {/* <Link to="/post">Pizza</Link> */}
         </nav>
     </header>
-    {/* <Route exact pat='/post'>
-    <PizzaPost />
-    </Route> */}
+    <Route exact pat='/post'>
+    <PizzaPost ditails={PizzaPost}/>
+    </Route>
     <Route path="/pizza">
       <Form change={change} submit={submit} values={formValues} />
     </Route>
