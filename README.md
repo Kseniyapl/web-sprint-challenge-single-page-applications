@@ -114,3 +114,17 @@ Follow these steps for completing your project.
 
 Set up your fork on Github to codegrade following the instructions [here](https://lambdaschool.instructure.com/courses/1675/assignments/51399?module_item_id=617624), pushing commits to your main branch.
 - [ ] Your code will be reviewed over the next few days. Read [these instructions](https://www.notion.so/How-to-View-Feedback-in-CodeGrade-c5147cee220c4044a25de28bcb6bb54a) to learn how to view feedback in CodeGrade.
+
+## Interview Questions
+
+1. 
+useRouteMatch can be used to access a match without rendering a Route. This is done by passing it the location argument.
+
+
+
+2.
+Form validation is a way to make sure that all inputs are correct, such as dates are formatted as dates and in correct format, emails follow proper email format, names' fields have minimum number of characters. To avoid confusion.
+
+
+3.
+End-to-end testing is a method to test the whole software code/application from beginning to end to make sure that the application behaves as expected. Application dependencies are checked as well as  a confirmation for  all integrations.
