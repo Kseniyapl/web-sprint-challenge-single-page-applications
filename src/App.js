@@ -46,10 +46,7 @@ const [disabled, setDisabled] = useState(initialDisabled);
 
 
 
-const change = (name, value) =>{
-  validate(name, value)
-  setFormValues({ ...formValues, [name]:value })
-}
+
 
 const setNewPizza = (newOrder) =>
 {
@@ -65,6 +62,15 @@ const validate = (name, value) =>
         .catch(err => setFormErrors({ ...formErrors, [name]: err.errors[0] }));
 };
 
+
+const change = (name, value) =>
+{
+    validate(name, value);
+    setFormValues({
+        ...formValues,
+        [name]: value
+    });
+};
  const submit = () =>
     {
         const newOrder = {

@@ -39,6 +39,7 @@ const Form = (props) => {
                             name='name'
                             type='text'
                         />
+                        
                     </label>
                 </div>
                 <h2>Build Your Own Pizza</h2>
