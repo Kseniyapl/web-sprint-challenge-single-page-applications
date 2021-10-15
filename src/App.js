@@ -14,9 +14,17 @@ import { Route, Link } from 'react-router-dom'
 const initialFormValues = {
     name: '',
     size: '',
-    source: '',
     souce1: false,
     souce2: false,
+    pepperoni: false,
+    sausage: false,
+    canadianBacon: false,
+    onions: false,
+    jalapeno: false,
+    mushroom: false,
+    greenPepper: false,
+    extraCheese: false,
+    threeCheese: false,
     special: '',
 }
 const initialFormErrors = {
