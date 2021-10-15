@@ -29,11 +29,11 @@ const Form = (props) => {
         <div>
             
             <form  id='pizza-form' onSubmit={onSubmit}>
-            <div className='name-input'>
+            <div id='name-input'>
                     <label>
                         <h2>Put your name</h2>
                         <input
-                            id='special'
+                            id='name-input'
                             value={values.name}
                             onChange={onChange}
                             name='name'
@@ -46,6 +46,7 @@ const Form = (props) => {
                  <div className="size-dropdown">
                 <label > Choice Of Size
                 <select
+                    id='size-dropdown'
                     onChange={onChange}
                     value={values.size}
                     name='size'
@@ -152,7 +153,7 @@ const Form = (props) => {
                     <label>
                         <h2>Special Instructions:</h2>
                         <input
-                            id='special'
+                            id='special-text'
                             value={values.special}
                             onChange={onChange}
                             name='special'

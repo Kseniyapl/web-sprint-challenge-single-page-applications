@@ -81,13 +81,13 @@ const validate = (name, value) =>
       schema.isValid(formValues).then(valid => setDisabled(!valid));
     }, [formValues]);
 
-useEffect(() => {
-  axios.get('https://reqres.in/api/orders')
-    .then(res => {
-     console.log(res.data.data)
+// useEffect(() => {
+//   axios.get('https://reqres.in/api/orders')
+//     .then(res => {
+//      console.log(res.data.data)
      
-    }).catch(err => console.error(err));
-}, [])
+//     }).catch(err => console.error(err));
+// }, [])
 
 
   return (
@@ -103,7 +103,7 @@ useEffect(() => {
     <Route exact path='/post'>
     <PizzaPost details={confirmation}/>
     </Route>
-    <Route path="/pizza">
+    <Route id='name-input' path="/pizza">
       <Form change={change} submit={submit} values={formValues} disabled={disabled} errors={formErrors}/>
     </Route>
     <Route exact path="/"> 

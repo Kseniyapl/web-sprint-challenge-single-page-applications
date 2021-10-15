@@ -7,8 +7,8 @@ const HomePage = (props) => {
    return (
     <div className="order-pizza">
     <h1>  
-    <Link to="/pizza"><button href="/pizza"> Order Pizza </button></Link>
-    <Route path="/pizza"></Route>
+        <Link id ="order-pizza"to="/pizza"><button href="/pizza"> Order Pizza </button></Link>
+            <Route path="/pizza" ></Route>
     </h1>
         </div>
    )
